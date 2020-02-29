@@ -1,0 +1,582 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my cart",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "QueryIntent",
+          "slots": [
+            {
+              "name": "function",
+              "type": "function",
+              "samples": [
+                "{function}"
+              ]
+            },
+            {
+              "name": "attribute",
+              "type": "attribute",
+              "samples": [
+                "{attribute} {attribute} {attribute} {attribute}",
+                "{attribute} {attribute}",
+                "{attribute}"
+              ]
+            },
+            {
+              "name": "table",
+              "type": "table",
+              "samples": [
+                "{table}"
+              ]
+            },
+            {
+              "name": "where",
+              "type": "indicator"
+            },
+            {
+              "name": "operator",
+              "type": "operator"
+            },
+            {
+              "name": "value",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "target_attr",
+              "type": "attribute"
+            }
+          ],
+          "samples": [
+            "{function} {attribute} {attribute} from {table} {where} {target_attr} {operator} {value}",
+            "{function} {attribute} {attribute} {attribute} {attribute} from {table} {where} {target_attr} {operator} {value}",
+            "{function} {attribute} from {table} {where} {target_attr} {operator} {value}",
+            "{function} {attribute} from {table}",
+            "{function} {attribute} {attribute} {attribute} {attribute} from {table}",
+            "{function} {attribute} {attribute} from {table}"
+          ]
+        },
+        {
+          "name": "ProductInfoIntent",
+          "slots": [
+            {
+              "name": "information",
+              "type": "information",
+              "samples": [
+                "the {information} of the product",
+                "i\u0027m looking for the {information} of the product",
+                "i\u0027m looking for the {information}",
+                "{information}"
+              ]
+            },
+            {
+              "name": "id",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{id}",
+                "it\u0027s {id}",
+                "of course. it\u0027s {id}",
+                "ok. it\u0027s {id}",
+                "sure. it\u0027s {id}"
+              ]
+            }
+          ],
+          "samples": [
+            "find the {information} of product {id}",
+            "find the {information} of product with ID {id}",
+            "find the {information} of the product with ID {id}"
+          ]
+        },
+        {
+          "name": "FindProductIntent",
+          "slots": [
+            {
+              "name": "order",
+              "type": "order",
+              "samples": [
+                "{order}",
+                "the {order}",
+                "i want the {order}"
+              ]
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "find the name of the {order} popular product",
+            "find the {order} popular product",
+            "find the names of the {number} {order} popular products",
+            "find the {number} {order} popular products"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "insert into"
+              }
+            },
+            {
+              "name": {
+                "value": "delete"
+              }
+            },
+            {
+              "name": {
+                "value": "update"
+              }
+            },
+            {
+              "name": {
+                "value": "select"
+              }
+            }
+          ],
+          "name": "function"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "days since prior order"
+              }
+            },
+            {
+              "name": {
+                "value": "order hour of day"
+              }
+            },
+            {
+              "name": {
+                "value": "order day of week"
+              }
+            },
+            {
+              "name": {
+                "value": "order number"
+              }
+            },
+            {
+              "name": {
+                "value": "user id"
+              }
+            },
+            {
+              "name": {
+                "value": "order id"
+              }
+            },
+            {
+              "name": {
+                "value": "product name"
+              }
+            },
+            {
+              "name": {
+                "value": "product id"
+              }
+            },
+            {
+              "name": {
+                "value": "department id"
+              }
+            },
+            {
+              "name": {
+                "value": "aisle id"
+              }
+            },
+            {
+              "name": {
+                "value": "minimum"
+              }
+            },
+            {
+              "name": {
+                "value": "average"
+              }
+            },
+            {
+              "name": {
+                "value": "max"
+              }
+            },
+            {
+              "name": {
+                "value": "count"
+              }
+            },
+            {
+              "name": {
+                "value": "star"
+              }
+            },
+            {
+              "name": {
+                "value": "add to cart order"
+              }
+            },
+            {
+              "name": {
+                "value": "reordered"
+              }
+            },
+            {
+              "name": {
+                "value": "department"
+              }
+            },
+            {
+              "name": {
+                "value": "aisle"
+              }
+            },
+            {
+              "name": {
+                "value": "order"
+              }
+            }
+          ],
+          "name": "attribute"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "departments"
+              }
+            },
+            {
+              "name": {
+                "value": "products"
+              }
+            },
+            {
+              "name": {
+                "value": "aisles"
+              }
+            },
+            {
+              "name": {
+                "value": "orders"
+              }
+            },
+            {
+              "name": {
+                "value": "order products"
+              }
+            }
+          ],
+          "name": "table"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "department"
+              }
+            },
+            {
+              "name": {
+                "value": "location"
+              }
+            },
+            {
+              "name": {
+                "value": "name"
+              }
+            }
+          ],
+          "name": "information"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "least"
+              }
+            },
+            {
+              "name": {
+                "value": "most"
+              }
+            }
+          ],
+          "name": "order"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "where"
+              }
+            }
+          ],
+          "name": "indicator"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "not equal to",
+                "synonyms": [
+                  "is not",
+                  "doesn\u0027t equal to",
+                  "does not equal to"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "smaller than",
+                "synonyms": [
+                  "is less than",
+                  "is smaller than",
+                  "less than"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "greater than",
+                "synonyms": [
+                  "is larger than",
+                  "is greater than",
+                  "larger than"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "equal to",
+                "synonyms": [
+                  "equals to",
+                  "is"
+                ]
+              }
+            }
+          ],
+          "name": "operator"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "QueryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "function",
+              "type": "function",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.501399761990.952045981854"
+              }
+            },
+            {
+              "name": "attribute",
+              "type": "attribute",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.501399761990.494009308980"
+              }
+            },
+            {
+              "name": "table",
+              "type": "table",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.501399761990.1167630793966"
+              }
+            },
+            {
+              "name": "where",
+              "type": "indicator",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "operator",
+              "type": "operator",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "value",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "target_attr",
+              "type": "attribute",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "ProductInfoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "information",
+              "type": "information",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.42922800941.898604886653"
+              }
+            },
+            {
+              "name": "id",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.42922800941.269690304004"
+              }
+            }
+          ]
+        },
+        {
+          "name": "FindProductIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "order",
+              "type": "order",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.737262025427.134786798345"
+              }
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.501399761990.1167630793966",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which table do you want to use?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.501399761990.952045981854",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What function do you want to use?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.501399761990.494009308980",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which columns do you want to use?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.484852436638.1003882532078",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Could you please tell me the ID of the product?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.42922800941.269690304004",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "could you please tell me the ID of the product?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.42922800941.898604886653",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what kind of information are you looking for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.737262025427.134786798345",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "do you want the most popular ones or the least?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.881477688373.1437016703861",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "sure. could you please repeat the value again?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.881477688373.848968657539",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "sure. which operator would you like to use?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "24"
+}
