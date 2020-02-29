@@ -2,7 +2,10 @@
 Querying database instance using voice input developed by Amazon Alexa!
 
 ## Project Description
-__Contributors:__ Mo Shi, Zekun Zhang, Ziqi Wang
+__Contributors:__ 
+-Mo Shi  
+-Zekun Zhang  
+-Ziqi Wang  
 
 ## Alexa Skills Introduction
 
