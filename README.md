@@ -13,6 +13,11 @@ Querying database instance using voice input developed by Amazon Alexa!
 
 ## Alexa Skills Introduction
 #### General Query Intent:
+General _SELECT_ function to query the database and return the results  
+- _Where_ clause supported
+- Single/Multiple/All attributes selection supported
+- Basic aggregate functions (_SUM/COUNT/MAX/etc._) supported
+- Users "speak out" the SQL queries
 
 #### Product Info Intent:
 
